@@ -1,0 +1,29 @@
+{% extends 'dashboard.html' %}
+        <title>Add NOtes</title>
+{ % block addcss %}
+    
+    </style>
+    {% block content %}
+        <center>
+    <form id="add-note-form" method="POST">
+                  <h2>Add Note</h2>
+                  <label for="note-title">Title:</label>
+                  <input type="text" id="note-title" name="title"><br><br>
+                  <label for="note-description">Description:</label>
+                  <textarea id="note-description" name="description"></textarea><br>
+                  <input type="submit" value="Submit">
+    </form></center>
+    {% endblock %}
+
+    <!-- <script>
+        const addNoteForm = document.getElementById('add-note-form');
+        addNoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+         const title = document.getElementById('note-title').value;
+         const description = document.getElementById('note-description').value;
+  // Add the new note to the list here
+        console.log(New note added: ${title} - ${description});
+      });
+
+
+    </script> -->

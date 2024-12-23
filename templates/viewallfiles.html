@@ -1,0 +1,46 @@
+{% extends 'dashboard.html' %}\
+{% block addcss %}
+{% endblock %}
+{% block content %}
+
+<body>
+    <form method="POST">
+        <center>
+          <h2>View all Notes</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Fileid</th>
+                        <th>Filename</th>
+                        <th>Created Time</th>
+                        <th> link</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in filesdata %}
+                    <tr>
+                        <td>{{i[0]}}</td>
+                        <td>{{i[1]}}</td>
+                        <td>{{i[2]}}</td>
+            
+                        <!-- <td><a href="#">notes_id</a></td>
+                        <td><a href="#">title</a></td>
+                        <td><a href="#">Description</a> </td> -->
+                        <td><a href="{{url_for('viewfile',fid=i[0])}}">view</a></td>
+                        <td><a href="{{url_for('downloadfile',fid=i[0])}}">Download</a></td>
+                        <td><a href="{{url_for('delete1',fid=i[0])}}">delete</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+
+            
+        </center>
+    </form>
+</body>
+{% endblock %}
+</html>

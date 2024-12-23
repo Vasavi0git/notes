@@ -1,0 +1,47 @@
+{% extends 'dashboard.html' %}\
+{% block addcss %}
+{% endblock %}
+{% block content %}
+
+<body>
+    <form method="POST">
+        <center>
+          <h2>View all Notes</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>notes_id</th>
+                        <th>title</th>
+                        <th>Description</th>
+                        <th>Created time</th>
+                        <th> link</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in notesdata %}
+                    <tr>
+                        <td>{{i[0]}}</td>
+                        <td>{{i[1]}}</td>
+                        <td>{{i[2]}}</td>
+                        <td>{{i[3]}}</td>
+                        <!-- <td><a href="#">notes_id</a></td>
+                        <td><a href="#">title</a></td>
+                        <td><a href="#">Description</a> </td> -->
+                        <td><a href="{{url_for('readnotes',nid=i[0])}}">view</a></td>
+                        <td><a href="{{url_for('updatenotes',nid=i[0])}}">update</a></td>
+                        <td><a href="{{url_for('delete',nid=i[0])}}">delete</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+
+            
+        </center>
+    </form>
+</body>
+{% endblock %}
+</html>

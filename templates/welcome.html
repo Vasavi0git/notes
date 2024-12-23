@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #bed74f;
+            margin-bottom: 20px;
+        }
+
+        center {
+            margin-top: 100px;
+        }
+
+        button {
+            background-color: #dbad53;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d0ea50;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+        <center>
+            <h1>Welcome to Simple Notes</h1>
+            <a href="{{url_for('create')}}"><button>Create</button></a>
+            <a href="{{url_for('login')}}"><button>Login</button></a>
+        </center>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: #555;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            background-color: #fafafa;
+            cursor: pointer;
+        }
+
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #4e90e8;
+        }
+
+        input[type="submit"] {
+            background-color: #4e90e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ab7;
+        }
+
+        input[type="submit"]:active {
+            background-color: #285a85;
+        }
+
+        /* Add media query for responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>File Upload</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Choose Files:</label>
+            <input type="file" name="file" id="file" accept=".jpg,.png,.pdf,.jpeg,.py,.txt,.docx,.doc" multiple required>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html> -->
+{% extends 'dashboard.html' %}
+        <title>Add NOtes</title>
+{ % block addcss %}
+    
+    {% block content %}
+    
+    <div class="container">
+        <h1>File Upload</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Choose Files:</label>
+            <input type="file" name="file" id="file" accept=".jpg,.png,.pdf,.jpeg,.py,.txt,.docx,.doc" multiple required>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+{% endblock %}
